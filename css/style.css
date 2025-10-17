@@ -1,0 +1,249 @@
+
+/*　==========
+・・・汎用クラス
+==========　*/
+:root {
+  --main-color: #4C566A;
+  --bg-dark: #2D3440;
+  --bg-light: #ECEFF4;
+  --bg-icon: #D8DEE9;
+  --font-light: #ECEFF4;
+}
+html {
+    font-size: 62.5%; /* 62.5% of 16px = 10px */
+}
+body{
+    font-family: 源ノ角ゴシック JP;
+    color:  var(--main-color);
+    font-weight: bold;
+}
+.inner{
+    max-width: 1080px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: var(--main-color);
+}
+.button{
+    font-size: 1.4rem;
+    padding: 1em;
+    background-color: var(--main-color);
+    border-radius: 8px;
+}
+.button a{
+    color: white;
+}
+.wave{
+    width: 100%;
+    display: block;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+.flex-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+/*　==========
+・・・ヘッダー
+==========　*/
+.header{
+    background-color: var(--bg-light);
+}
+.header_inner{
+    justify-content: space-between;
+}
+
+.header_inner img{
+    width: 55px;
+    height: auto;
+    margin: 24px 0;
+}
+
+
+
+/*　==========
+・・・メイン
+==========　*/
+.main_innner{
+    width: 100%;
+}
+.main_section{
+     background-color: var(--bg-light);
+}
+.pc_illust{
+    max-width: 540px;
+    width: 50%;
+    margin-top: 64px;
+}
+.main{
+    margin-right: auto;
+}
+.main h2{
+    font-size: 3.8rem;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.main p{
+    font-size: 1.7rem;
+    margin-bottom: 6px;  
+}
+
+.main img{
+    margin-right: 10px;
+}
+.main-button {
+    width: 180px;
+    text-align: center;
+    margin-top: 32px;
+}
+@media (max-width: 768px) {
+    .main_inner{
+        flex-direction: column-reverse;
+    }
+}
+
+
+/*　==========
+・・・メリット
+==========　*/
+.merito_ttl{
+    text-align: center;
+    font-size: 32px;
+    margin: 80px 0;
+}
+.merito_list{
+    justify-content: space-between;
+    gap:24px;
+
+}
+.merito{
+    text-align: center;
+    max-width: 344px;
+}
+h4{
+    font-size: 18px;
+    padding: 16px 0;
+}
+.merito p{
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    line-height: 1.8;
+}
+.merito img{
+    background-color: var(--bg-light);
+    padding: 10px;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .merito_list{
+        flex-direction: column;
+    }
+    .merito p{
+        margin-bottom: 40px;
+    }
+}
+
+/*　==========
+・・・機能
+==========　*/
+.function_ttl{
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 80px;
+}
+.function_section{
+    background-color: var(--bg-dark);
+    color: var(--font-light);
+    padding-bottom: 72px;
+}
+.function{
+    margin-bottom: 64px;
+}
+.function img{
+    max-width: 55%;
+    height: auto;
+}
+h6{
+    font-size: 22px;
+    margin-bottom: 16px;    
+}
+.function_txt p{
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: normal;
+}
+.function_txt01{
+    margin-right: 54px;   
+}
+.function_txt02{
+    margin-left: 54px;   
+}
+@media (max-width: 768px){
+    .function{
+        flex-direction: column;
+    }
+    h6{
+        margin-top: 16px;
+    }
+    .function img{
+    max-width: 100%;
+    height: auto;
+    }
+    .function_txt01,.function_txt02{
+    margin-left: 0px;   
+    }
+}
+
+/*　==========
+・・・フッター
+==========　*/
+.footer{
+    justify-content: space-between;
+    height: 140px;
+    font-size: 14px;
+    color: var(--main-color);
+    font-weight: normal;
+    align-items: center;
+}
+
+.list:not(:first-child)::before{
+    content: "/";
+    margin: 0 10px;
+}
+@media (max-width: 768px){
+    .footer{
+        flex-direction: column;
+        height: 212px;
+    }
+    .nav_list{
+        flex-direction: column;
+        margin-top: 40px;
+        font-size: 14px;
+    }
+    .list{
+        margin-bottom: 8px;
+    }
+    .list:not(:first-child)::before{
+        content: none;
+    }
+    .footer p{
+        margin-top: 24px;
+        margin-bottom: 24px;
+    }
+}
